@@ -43,13 +43,16 @@
             }
             if(!this.word){
               this.word_msg='请输入密码'
-              return false;
+
             }else if(this.word!='123456'&&this.word){
               this.word_msg='密码错误';
 
             }else {
               this.word_msg=''
             };
+            if(this.word_msg){
+              return false;
+            }
 
             this.$store.state.app.Loadings=true
             try{
